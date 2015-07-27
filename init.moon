@@ -35,20 +35,20 @@ grids = {
 }
 
 apps = {
-  t: "Sublime Text"
-  w: "WebStorm"
-  c: "Terminal"
-  f: "Firefox"
-  d: "Dash"
-  l: "Dashlane"
-  e: "Evernote"
-  s: "Spotify"
-  p: "Pomodoro One"
-  g: "Google Chrome"
   a: "Atom"
   b: "Brackets"
-  v: "VirtualBox"
+  c: "Terminal"
+  d: "Dash"
+  e: "Evernote"
+  f: "Firefox"
+  g: "Google Chrome"
+  l: "Dashlane"
+  p: "Pomodoro One"
+  s: "Spotify"
+  t: "Sublime Text"
   u: "Wunderlist"
+  v: "VirtualBox"
+  w: "WebStorm"
 }
 
 gridlists = {
