@@ -37,7 +37,7 @@ grids = {
 apps = {
   a: "Atom"
   b: "Brackets"
-  c: "Terminal"
+  c: "iTerm"
   d: "Dash"
   e: "Evernote"
   f: "Firefox"
