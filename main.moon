@@ -2,8 +2,9 @@
 -- Description: Hammerspoon configuration file
 
 import alert, application, window, hotkey from hs
-grid = require "grid"
-spotify = require "spotify"
+
+grid = require "modules/grid"
+spotify = require "modules/spotify"
 
 mash = {"ctrl", "alt", "cmd"}
 definitions = {}
