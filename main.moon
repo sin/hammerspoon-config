@@ -32,24 +32,13 @@ grids = {
 }
 
 apps = {
-  a: 'Atom'
-  b: 'Brackets'
-  c: 'iTerm'
-  d: 'Dash'
-  e: 'Evernote'
+  a: 'Affinity Designer'
+  c: 'Visual Studio Code'
+  t: 'iTerm'
   f: 'Firefox'
   g: 'Google Chrome'
-  i: 'Finder'
-  k: 'Skype'
-  l: 'Dashlane'
-  m: 'VirtualBoxVM'
-  p: 'Adobe Photoshop CC 2015'
-  o: 'Pomodoro One'
+  m: 'Finder'
   s: 'Spotify'
-  t: 'Sublime Text'
-  u: 'Wunderlist'
-  v: 'VirtualBox'
-  w: 'WebStorm'
 }
 
 gridlists = {
