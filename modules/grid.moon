@@ -37,6 +37,6 @@ grid.set = (win, cell, screen) ->
   frame.w = frame.w - (grid.MARGINX * 2)
   frame.h = frame.h - (grid.MARGINY * 2)
 
-  win\setframe(frame)
+  win\setFrame(frame)
 
 return grid
