@@ -1,13 +1,8 @@
--- File:        ~/.mjolnir/init.moon
--- Description: Mjolnir configuration file
--- Author:      Mateusz Sienkan
+-- File:        ~/.hammerspoon/main.moon
+-- Description: Hammerspoon configuration file
 
-application = require "mjolnir.application"
-window = require "mjolnir.window"
-hotkey = require "mjolnir.hotkey"
-alert = require "mjolnir.alert"
+import alert, application, window, hotkey from hs
 grid = require "grid"
-hints = require "hints"
 spotify = require "spotify"
 
 mash = {"ctrl", "alt", "cmd"}
@@ -110,6 +105,6 @@ init = ->
 
   hotkey.bind(mash, "M", minimize)
   hotkey.bind(mash, "=", spotify.displayCurrentTrack)
-  hotkey.bind(mash, "space", hints.displayHints)
+)
 
 init!

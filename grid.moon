@@ -1,4 +1,4 @@
-window = require "mjolnir.window"
+import window from hs
 
 grid = {}
 

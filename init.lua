@@ -1,6 +1,5 @@
--- File:        ~/.mjolnir/init.lua
--- Description: Mjolnir configuration file
--- Author:      Mateusz Sienkan
+-- File:        ~/.hammerspoon/init.lua
+-- Description: Hammerspoon configuration entrypoint
 
 require 'moonscript'
-require 'init'
+require 'main'
