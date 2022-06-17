@@ -3,10 +3,10 @@
 
 import alert, application, window, hotkey from hs
 
-grid = require "modules/grid"
-spotify = require "modules/spotify"
+grid = require 'modules/grid'
+spotify = require 'modules/spotify'
 
-mash = {"ctrl", "alt", "cmd"}
+mash = {'ctrl', 'alt', 'cmd'}
 definitions = {}
 recentmin = nil
 
@@ -31,35 +31,35 @@ grids = {
 }
 
 apps = {
-  a: "Atom"
-  b: "Brackets"
-  c: "iTerm"
-  d: "Dash"
-  e: "Evernote"
-  f: "Firefox"
-  g: "Google Chrome"
-  i: "Finder"
-  k: "Skype"
-  l: "Dashlane"
-  m: "VirtualBoxVM"
-  p: "Adobe Photoshop CC 2015"
-  o: "Pomodoro One"
-  s: "Spotify"
-  t: "Sublime Text"
-  u: "Wunderlist"
-  v: "VirtualBox"
-  w: "WebStorm"
+  a: 'Atom'
+  b: 'Brackets'
+  c: 'iTerm'
+  d: 'Dash'
+  e: 'Evernote'
+  f: 'Firefox'
+  g: 'Google Chrome'
+  i: 'Finder'
+  k: 'Skype'
+  l: 'Dashlane'
+  m: 'VirtualBoxVM'
+  p: 'Adobe Photoshop CC 2015'
+  o: 'Pomodoro One'
+  s: 'Spotify'
+  t: 'Sublime Text'
+  u: 'Wunderlist'
+  v: 'VirtualBox'
+  w: 'WebStorm'
 }
 
 gridlists = {
-  { key: "up",    list: {"fullscreen", "top", "medium"} }
-  { key: "down",  list: {"bottom", "medium"} }
-  { key: "left",  list: {"left", "leftwide", "leftnarrow"} }
-  { key: "right", list: {"right", "rightwide", "rightnarrow"} }
-  { key: "1",     list: {"topleft"} }
-  { key: "2",     list: {"topright"} }
-  { key: "3",     list: {"bottomleft"} }
-  { key: "4",     list: {"bottomright"} }
+  { key: 'up',    list: {'fullscreen', 'top', 'medium'} }
+  { key: 'down',  list: {'bottom', 'medium'} }
+  { key: 'left',  list: {'left', 'leftwide', 'leftnarrow'} }
+  { key: 'right', list: {'right', 'rightwide', 'rightnarrow'} }
+  { key: '1',     list: {'topleft'} }
+  { key: '2',     list: {'topright'} }
+  { key: '3',     list: {'bottomleft'} }
+  { key: '4',     list: {'bottomright'} }
 }
 
 minimize = ->
@@ -75,7 +75,7 @@ compare = (a, b) ->
 gridset = (list, key) ->
   return ->
     win = window.focusedwindow!
-    if (win == nil or win\isstandard ~= true) and recentmin and key == "up"
+    if (win == nil or win\isstandard ~= true) and recentmin and key == 'up'
       win = recentmin
       win\unminimize!
       recentmin = nil
@@ -104,8 +104,8 @@ init = ->
   for key, fun in pairs definitions
     hotkey.bind(mash, key, fun)
 
-  hotkey.bind(mash, "M", minimize)
-  hotkey.bind(mash, "=", spotify.displayCurrentTrack)
+  hotkey.bind(mash, 'M', minimize)
+  hotkey.bind(mash, '=', spotify.displayCurrentTrack)
 )
 
 init!
