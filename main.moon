@@ -1,7 +1,7 @@
 -- File:        ~/.hammerspoon/main.moon
 -- Description: Hammerspoon configuration file
 
-import console, application, window, hotkey from hs
+import application, console, hotkey, timer, window from hs
 
 require 'modules/auto-reload'
 spotify = require 'modules/spotify'
@@ -99,7 +99,7 @@ init = ->
     hotkey.bind(mash, key, fun)
 
   hotkey.bind(mash, 'M', minimize)
-  hotkey.bind(mash, '=', spotify.displayCurrentTrack)
-)
+  hotkey.bind(mash, '=', spotify.showCurrentTrack)
 
+timer.doEvery 1, spotify.showIfChanged
 init!
