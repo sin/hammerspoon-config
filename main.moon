@@ -1,11 +1,15 @@
 -- File:        ~/.hammerspoon/main.moon
 -- Description: Hammerspoon configuration file
 
-import alert, application, window, hotkey from hs
+import console, application, window, hotkey from hs
 
 require 'modules/auto-reload'
 spotify = require 'modules/spotify'
 grid = require 'modules/grid'
+
+console.darkMode(true)
+console.toolbar(nil)
+console.titleVisibility('hidden')
 
 mash = {'ctrl', 'alt', 'cmd'}
 definitions = {}
@@ -53,7 +57,7 @@ gridlists = {
 }
 
 minimize = ->
-  win = window.focusedwindow!
+  win = window.focusedWindow!
   if win == nil return
   win\minimize!
   recentmin = win
@@ -64,13 +68,13 @@ compare = (a, b) ->
 
 gridset = (list, key) ->
   return ->
-    win = window.focusedwindow!
-    if (win == nil or win\isstandard ~= true) and recentmin and key == 'up'
+    win = window.focusedWindow!
+    if (win == nil or win\isStandard ~= true) and recentmin and key == 'up'
       win = recentmin
       win\unminimize!
       recentmin = nil
       return
-    elseif win == nil or win\isfullscreen! == true return
+    elseif win == nil or win\isFullScreen! == true return
     current_grid = grid.get(win)
     index = nil
     for i, grid in ipairs list
@@ -89,7 +93,7 @@ init = ->
 
   for key, app in pairs apps
     definitions[key] = ->
-      application.launchorfocus(app)
+      application.launchOrFocus(app)
 
   for key, fun in pairs definitions
     hotkey.bind(mash, key, fun)
