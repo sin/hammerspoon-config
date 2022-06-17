@@ -3,8 +3,9 @@
 
 import alert, application, window, hotkey from hs
 
-grid = require 'modules/grid'
+require 'modules/auto-reload'
 spotify = require 'modules/spotify'
+grid = require 'modules/grid'
 
 mash = {'ctrl', 'alt', 'cmd'}
 definitions = {}
